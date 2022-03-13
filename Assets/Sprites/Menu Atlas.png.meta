@@ -1,0 +1,1428 @@
+fileFormatVersion: 2
+guid: a2bde92caa2d46345a22e29442244fbc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -664198972970295099
+    second: Menu Atlas_0
+  - first:
+      213: 2407977469541155969
+    second: Menu Atlas_1
+  - first:
+      213: 2218087531410350039
+    second: Menu Atlas_2
+  - first:
+      213: -6525379642044419348
+    second: Menu Atlas_3
+  - first:
+      213: 7268541776307333126
+    second: Menu Atlas_4
+  - first:
+      213: -3993607256526396461
+    second: Menu Atlas_5
+  - first:
+      213: -7286882987986291299
+    second: Menu Atlas_6
+  - first:
+      213: 5671265976129322182
+    second: Menu Atlas_7
+  - first:
+      213: 5119977042508220381
+    second: Menu Atlas_8
+  - first:
+      213: 7561687888114025195
+    second: Menu Atlas_9
+  - first:
+      213: 827583303216389729
+    second: Menu Atlas_10
+  - first:
+      213: -6469760951917314231
+    second: Menu Atlas_11
+  - first:
+      213: -5505727882803122057
+    second: Menu Atlas_12
+  - first:
+      213: 5310913479100219558
+    second: Menu Atlas_13
+  - first:
+      213: 6640102235457399390
+    second: Menu Atlas_14
+  - first:
+      213: 654261628951863148
+    second: Menu Atlas_15
+  - first:
+      213: 4465295565719118441
+    second: Menu Atlas_16
+  - first:
+      213: 1992440741393118713
+    second: Menu Atlas_17
+  - first:
+      213: 58705215243927405
+    second: Menu Atlas_18
+  - first:
+      213: 1660985709907113921
+    second: Menu Atlas_19
+  - first:
+      213: 4122069580167573680
+    second: Menu Atlas_20
+  - first:
+      213: 3778277252099797761
+    second: Menu Atlas_21
+  - first:
+      213: -9142973536586266781
+    second: Menu Atlas_22
+  - first:
+      213: 1513401961326944872
+    second: Menu Atlas_23
+  - first:
+      213: 7062723902820204267
+    second: Menu Atlas_24
+  - first:
+      213: -7858301887784899058
+    second: Menu Atlas_25
+  - first:
+      213: -3067322747807690265
+    second: Menu Atlas_26
+  - first:
+      213: -467036753645375525
+    second: Menu Atlas_27
+  - first:
+      213: -3069956773852603260
+    second: Menu Atlas_28
+  - first:
+      213: 3680724405653417729
+    second: Menu Atlas_29
+  - first:
+      213: -9210361791498346384
+    second: Menu Atlas_30
+  - first:
+      213: 2115103991542484646
+    second: Menu Atlas_31
+  - first:
+      213: 7338438273926238903
+    second: Menu Atlas_32
+  - first:
+      213: -1348603659791136307
+    second: Menu Atlas_33
+  - first:
+      213: -8396266644824867005
+    second: Menu Atlas_34
+  - first:
+      213: 8893701690522260435
+    second: Menu Atlas_35
+  - first:
+      213: -8785922724300158357
+    second: Menu Atlas_36
+  - first:
+      213: -1621810021428513790
+    second: Menu Atlas_37
+  - first:
+      213: 8295396949394499101
+    second: Menu Atlas_38
+  - first:
+      213: -7559523796805814235
+    second: Menu Atlas_39
+  - first:
+      213: -8640306655657796164
+    second: Menu Atlas_40
+  - first:
+      213: 7121064092481112761
+    second: Menu Atlas_41
+  - first:
+      213: 7585393991887839816
+    second: Menu Atlas_42
+  - first:
+      213: 5338172322695489132
+    second: Frame For Profile Bar
+  - first:
+      213: 3597068133986697187
+    second: Menu Atlas_44
+  - first:
+      213: -1455488863725795813
+    second: Menu Atlas_45
+  - first:
+      213: 399311936665435734
+    second: Menu Atlas_46
+  - first:
+      213: -6137136691842887778
+    second: Menu Atlas_47
+  - first:
+      213: -8615177585417949003
+    second: Menu Atlas_48
+  - first:
+      213: -2882690498893143554
+    second: Menu Atlas_49
+  - first:
+      213: 5490032369202089771
+    second: Menu Atlas_50
+  - first:
+      213: -208988248591682330
+    second: Menu Atlas_51
+  - first:
+      213: -321496589235724310
+    second: Menu Atlas_52
+  - first:
+      213: 5758714552504772008
+    second: Menu Atlas_53
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Menu Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1119
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c02deb9d8a48c6f0800000000000000
+      internalID: -664198972970295099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 911
+        width: 457
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184052320cada6120800000000000000
+      internalID: 2407977469541155969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1080
+        width: 35
+        height: 65
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfdf6e9bda38ce10800000000000000
+      internalID: 2218087531410350039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1115
+        width: 65
+        height: 31
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2706bd9c13175a0800000000000000
+      internalID: -6525379642044419348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1044
+        width: 82
+        height: 97
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608a2e33c3c0fd460800000000000000
+      internalID: 7268541776307333126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 855
+        width: 156
+        height: 304
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 22, y: 55, z: 16, w: 57}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d36256fb5bd398c0800000000000000
+      internalID: -3993607256526396461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 962
+        width: 158
+        height: 192
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d957d3da78acfda90800000000000000
+      internalID: -7286882987986291299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1053
+        width: 248
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 37, y: 6, z: 39, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc72fd8b5264be40800000000000000
+      internalID: 5671265976129322182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 1024
+        width: 60
+        height: 60
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd78bdc4effcd0740800000000000000
+      internalID: 5119977042508220381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 643
+        width: 182
+        height: 388
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be20969121380f860800000000000000
+      internalID: 7561687888114025195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 911
+        width: 82
+        height: 101
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ed14a21aa2c7b00800000000000000
+      internalID: 827583303216389729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 637
+        width: 181
+        height: 385
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f764741bac636a0800000000000000
+      internalID: -6469760951917314231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 608
+        width: 182
+        height: 348
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7707e8349a9b793b0800000000000000
+      internalID: -5505727882803122057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 625
+        width: 15
+        height: 309
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a04a9abba724b940800000000000000
+      internalID: 5310913479100219558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 638
+        width: 181
+        height: 261
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a27b86dc1662c50800000000000000
+      internalID: 6640102235457399390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 640
+        width: 267
+        height: 253
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f18df2c77641900800000000000000
+      internalID: 654261628951863148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 636
+        width: 179
+        height: 261
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a0dba8aae7fd30800000000000000
+      internalID: 4465295565719118441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 620
+        width: 180
+        height: 221
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5b0c24c4296ab10800000000000000
+      internalID: 1992440741393118713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 646
+        width: 14
+        height: 185
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fb31d051090d000800000000000000
+      internalID: 58705215243927405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 473
+        width: 49
+        height: 152
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c77300f3b10d0710800000000000000
+      internalID: 1660985709907113921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 576
+        width: 47
+        height: 48
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0f4598178843930800000000000000
+      internalID: 4122069580167573680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 473
+        width: 50
+        height: 152
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103f85284232f6430800000000000000
+      internalID: 3778277252099797761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 577
+        width: 46
+        height: 47
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3678af09202ad1180800000000000000
+      internalID: -9142973536586266781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 558
+        width: 59
+        height: 61
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862a543c01fa00510800000000000000
+      internalID: 1513401961326944872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 558
+        width: 50
+        height: 62
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee324e38f5d30260800000000000000
+      internalID: 7062723902820204267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 552
+        width: 61
+        height: 67
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0eacc07114b1f290800000000000000
+      internalID: -7858301887784899058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 549
+        width: 32
+        height: 72
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e19275563eae65d0800000000000000
+      internalID: -3067322747807690265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 549
+        width: 33
+        height: 72
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf6ae90c80c489f0800000000000000
+      internalID: -467036753645375525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 243
+        width: 1002
+        height: 373
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c16ba54925565d0800000000000000
+      internalID: -3069956773852603260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 527
+        width: 46
+        height: 47
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f251b785f841330800000000000000
+      internalID: 3680724405653417729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 527
+        width: 46
+        height: 47
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07029eccfb83e2080800000000000000
+      internalID: -9210361791498346384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 485
+        width: 55
+        height: 62
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae86eebfdb5a5d10800000000000000
+      internalID: 2115103991542484646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 495
+        width: 50
+        height: 42
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2118bbabe57d560800000000000000
+      internalID: 7338438273926238903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 527
+        width: 12
+        height: 11
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc98b5bdd1cc84de0800000000000000
+      internalID: -1348603659791136307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 520
+        width: 25
+        height: 25
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fb0cbc8f77a7b80800000000000000
+      internalID: -8396266644824867005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 448
+        width: 59
+        height: 82
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3ded11196cc6b70800000000000000
+      internalID: 8893701690522260435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 475
+        width: 46
+        height: 47
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a8e0205d1221680800000000000000
+      internalID: -8785922724300158357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 474
+        width: 46
+        height: 48
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204b593d06c2e79e0800000000000000
+      internalID: -1621810021428513790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 459
+        width: 35
+        height: 29
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16a487139b2f1370800000000000000
+      internalID: 8295396949394499101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 332
+        width: 118
+        height: 119
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528f64ca82d271790800000000000000
+      internalID: -7559523796805814235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 336
+        width: 113
+        height: 113
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbdd21fffd6771880800000000000000
+      internalID: -8640306655657796164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 331
+        width: 117
+        height: 120
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba4027201a13d260800000000000000
+      internalID: 7121064092481112761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 337
+        width: 125
+        height: 112
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8426bdf75abb44960800000000000000
+      internalID: 7585393991887839816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame For Profile Bar
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 239
+        width: 231
+        height: 168
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 28, y: 31, z: 22, w: 31}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c662614d17ff41a40800000000000000
+      internalID: 5338172322695489132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 206
+        width: 118
+        height: 120
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef7727e86a5be130800000000000000
+      internalID: 3597068133986697187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 217
+        width: 113
+        height: 109
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16461707901dcbe0800000000000000
+      internalID: -1455488863725795813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 206
+        width: 117
+        height: 120
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e348b3714aa8500800000000000000
+      internalID: 399311936665435734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 213
+        width: 111
+        height: 113
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f40b8d1b284daa0800000000000000
+      internalID: -6137136691842887778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 0
+        width: 341
+        height: 219
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0714891adb07880800000000000000
+      internalID: -8615177585417949003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 182
+        width: 11
+        height: 37
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1a410b340aef7d0800000000000000
+      internalID: -2882690498893143554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 8
+        width: 363
+        height: 215
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fcfa33a53803c40800000000000000
+      internalID: 5490032369202089771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 45
+        width: 280
+        height: 154
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e436709b46891df0800000000000000
+      internalID: -208988248591682330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 79
+        width: 118
+        height: 119
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefda123e80d98bf0800000000000000
+      internalID: -321496589235724310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 83
+        width: 112
+        height: 114
+      alignment: 8
+      pivot: {x: 1, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a56be0ef501bef40800000000000000
+      internalID: 5758714552504772008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ab82393bfde1f7e4598127f8a4cbaeaf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

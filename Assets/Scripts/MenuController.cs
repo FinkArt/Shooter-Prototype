@@ -2,88 +2,81 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class MainMenuTab
+{
+    public string MainMenuTabName;
+    public Button TabMainButton;
+    public GameObject View;
+    public Text ButtonTabText;
+    public Button BackButton;
+    public GameObject MainMenuView;
+    public void SetTitle()
+    {
+        ButtonTabText.text = MainMenuTabName;
+    }
+}
+
 public class MenuController : MonoBehaviour
 {
+    [SerializeField] private MainMenuTab[] _mainMenuTabs;
+    [Space]
+    [SerializeField] private ShopController _shopController;
+    
     [SerializeField] private Button _playButton;
-    [SerializeField] private Button _settingsButton;
-    [SerializeField] private Button _developersButton;
     [SerializeField] private Button _exitButton;
     [SerializeField] private Button _shopButton;
-    [Space]
-    [SerializeField] private GameObject _mainMenuWindow;
-    [SerializeField] private GameObject _settingsMenuWindow;
-    [SerializeField] private GameObject _developersMenuWindow;
-    [SerializeField] private GameObject _shopWindow;
-    [Space] 
-    [SerializeField] private Button[] _backButtons;
+    [SerializeField] private Button[] _backButton;
     
+    private MainMenuTab _currentTab;
     
 
     private void Awake()
     {
-        _playButton.onClick.AddListener(OnPlayButtonClicked);
-        _developersButton.onClick.AddListener(OnDevelopersButtonClicked);
-        _settingsButton.onClick.AddListener(OnSettingsButtonClicked);
-        _exitButton.onClick.AddListener(OnExitButtonClicked);
-        _shopButton.onClick.AddListener(OnShopButtonClick);
-        foreach (var backButton in _backButtons)
+        foreach (var mainMenuTab in _mainMenuTabs)
         {
-            if (backButton == null)
-            {
-                Debug.LogError("Элемент цикла не заполнен!");
-                continue;
-            }
-            backButton.onClick.AddListener(OnBackButtonClick);
+            mainMenuTab.SetTitle();
+            mainMenuTab.TabMainButton.onClick.AddListener(() => OnTabClicked(mainMenuTab));
+            //mainMenuTab.BackButton.onClick.AddListener(() => OnBackTabClicked(mainMenuTab));
         }
-    }
 
-    #region UIButtonsCallbacks
-    private void OnPlayButtonClicked()
-    {
-        Debug.LogWarning("Play button was <color=yellow>clicked</color>!");
-    }
-    
-    private void OnSettingsButtonClicked()
-    {
-        _settingsMenuWindow.SetActive(true);
-        _mainMenuWindow.SetActive(false);
-        _developersMenuWindow.SetActive(false);
-        _shopWindow.SetActive(false);
-    }
-
-    private void OnDevelopersButtonClicked()
-    {
-        _settingsMenuWindow.SetActive(false);
-        _mainMenuWindow.SetActive(false);
-        _developersMenuWindow.SetActive(true);
-        _shopWindow.SetActive(false);
-    }
-    
-    private void OnExitButtonClicked()
-    {
+        // foreach (var backButton in _backButton)
+        // {
+        //     backButton.onClick.AddListener(() => OnBackTabClicked(backButton));
+        // }
+        
+        
+        _playButton.onClick.AddListener((() => Debug.LogWarning("Play button was <color=yellow>clicked</color>!")) );
+        _exitButton.onClick.AddListener((() =>
+        {
         #if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
+            EditorApplication.isPlaying = false;
         #else
-        Application.Quit();
+            Application.Quit();
         #endif
+        }));
+        
+        _shopButton.onClick.AddListener(OnShopButtonClick);
+        
     }
 
-    private void OnBackButtonClick()
+    private void OnTabClicked(MainMenuTab tab)
     {
-        _settingsMenuWindow.SetActive(false);
-        _mainMenuWindow.SetActive(true);
-        _developersMenuWindow.SetActive(false);
-        _shopWindow.SetActive(false);
+        tab.View.SetActive(true);
+        tab.MainMenuView.SetActive(false);
     }
+
+    // private void OnBackTabClicked(MainMenuTab backTab)
+    // {
+    //     backTab.View.SetActive(false);
+    //     backTab.MainMenuView.SetActive(true);
+    // }
 
     private void OnShopButtonClick()
     {
-        _settingsMenuWindow.SetActive(false);
-        _mainMenuWindow.SetActive(false);
-        _developersMenuWindow.SetActive(false);
-        _shopWindow.SetActive(true);
+        _shopController.SetShopActive(!_shopController.Active);
     }
-    #endregion
+    
 }
 
 #region TheoryOfC#

@@ -3,97 +3,80 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class ShopTab
+{
+    public string ShopTabName;
+    public Button TabButton;
+    public Image TabImage;
+    public Text TabText;
+    public GameObject ShopTabItemViewPrefab;
+    public RectTransform SpawnRoot;
+    public GameObject View;
+
+    public void SetTitle()
+    {
+        TabText.text = ShopTabName;
+    }
+
+    public void SetTabSprite(Sprite sprite)
+    {
+        TabImage.sprite = sprite;
+    }
+
+    public void SetTextColor(Color color)
+    {
+        TabText.color = color;
+    }
+}
+
 public class ShopController : MonoBehaviour
 {
-    [SerializeField] private Button _crystalsButton;
-    [SerializeField] private Button _coinsButton;
-    [SerializeField] private Button _avatarsButton;
-    [SerializeField] private Button _swordsButton;
-    [Space] 
-    [SerializeField] private GameObject _crystalsViewport;
-    [SerializeField] private GameObject _coinsViewport;
-    [SerializeField] private GameObject _avatarsViewport;
-    [SerializeField] private GameObject _swordsViewport;
-    [Space] 
-    [SerializeField] private Sprite _activeButtonSprite;
-    [SerializeField] private Sprite _disactiveButtonSprite;
+    [SerializeField] private GameObject _shopBody;
+    [SerializeField] private ShopTab[] _shopTabs;
     [Space]
-    [SerializeField] private Color _brownColor;
-    [SerializeField] private Color _yellowColor;
+    [SerializeField] private Sprite _activeTabSprite;
+    [SerializeField] private Sprite _disabledTabSprite;
+    [Space]
+    [SerializeField] private Color _activeTextColor;
+    [SerializeField] private Color _disabledTextColor;
+    [Space]
+    [SerializeField] private Button _closeButton;
+    public bool Active => _shopBody.activeInHierarchy;
+
+    private ShopTab _currentTab; //ссылка указатель на активную вкладку
+    
 
     private void Awake()
     {
-        _crystalsButton.onClick.AddListener(OnCrystalsButtonClick);
-        _coinsButton.onClick.AddListener(OnCoinsButtonClick);
-        _avatarsButton.onClick.AddListener(OnAvatarsButtonClick);
-        _swordsButton.onClick.AddListener(OnSwordsButtonClick);
+        _closeButton.onClick.AddListener(() => SetShopActive(false));
+
+        foreach (var shopTab in _shopTabs)
+        {
+            shopTab.SetTitle();
+            shopTab.TabButton.onClick.AddListener(() => OnTabClicked(shopTab));
+        }
+    }
+
+    private void OnTabClicked(ShopTab tab)
+    {
+        if (_currentTab != null)
+        {
+            _currentTab.SetTabSprite(_disabledTabSprite);
+            _currentTab.View.SetActive(false);
+            _currentTab.SetTextColor(_disabledTextColor);
+            
+        }
+
+        tab.SetTabSprite(_activeTabSprite);
+        tab.View.SetActive(true);
+        tab.SetTextColor(_activeTextColor);
         
+        _currentTab = tab;
     }
 
-    private void OnCrystalsButtonClick()
+    public void SetShopActive(bool active)
     {
-        _crystalsViewport.SetActive(true);
-        _coinsViewport.SetActive(false);
-        _avatarsViewport.SetActive(false);
-        _swordsViewport.SetActive(false);
-        _crystalsButton.GetComponent<Image>().sprite = _activeButtonSprite;
-        _crystalsButton.GetComponentInChildren<Text>().color = _brownColor;
-        _coinsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _coinsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _avatarsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _avatarsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _swordsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _swordsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        
+        _shopBody.SetActive(active);
     }
-
-    private void OnCoinsButtonClick()
-    {
-        _crystalsViewport.SetActive(false);
-        _coinsViewport.SetActive(true);
-        _avatarsViewport.SetActive(false);
-        _swordsViewport.SetActive(false);
-        _crystalsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _crystalsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _coinsButton.GetComponent<Image>().sprite = _activeButtonSprite;
-        _coinsButton.GetComponentInChildren<Text>().color = _brownColor;
-        _avatarsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _avatarsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _swordsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _swordsButton.GetComponentInChildren<Text>().color = _yellowColor;
-    }
-
-    private void OnAvatarsButtonClick()
-    {
-        _crystalsViewport.SetActive(false);
-        _coinsViewport.SetActive(false);
-        _avatarsViewport.SetActive(true);
-        _swordsViewport.SetActive(false);
-        _crystalsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _crystalsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _coinsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _coinsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _avatarsButton.GetComponent<Image>().sprite = _activeButtonSprite;
-        _avatarsButton.GetComponentInChildren<Text>().color = _brownColor;
-        _swordsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _swordsButton.GetComponentInChildren<Text>().color = _yellowColor;
-    }
-
-    private void OnSwordsButtonClick()
-    {
-        _crystalsViewport.SetActive(false);
-        _coinsViewport.SetActive(false);
-        _avatarsViewport.SetActive(false);
-        _swordsViewport.SetActive(true);
-        _crystalsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _crystalsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _coinsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _coinsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _avatarsButton.GetComponent<Image>().sprite = _disactiveButtonSprite;
-        _avatarsButton.GetComponentInChildren<Text>().color = _yellowColor;
-        _swordsButton.GetComponent<Image>().sprite = _activeButtonSprite;
-        _swordsButton.GetComponentInChildren<Text>().color = _brownColor;
-        
-    }
-    
 }

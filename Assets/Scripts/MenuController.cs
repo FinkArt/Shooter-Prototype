@@ -1,82 +1,134 @@
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class MainMenuTab
+public enum MenuName
 {
-    public string MainMenuTabName;
-    public Button TabMainButton;
-    public GameObject View;
-    public Text ButtonTabText;
+    None = 0,
+    MainMenu = 1,
+    Play = 2,
+    Settings = 3,
+    Developers = 4,
+    Exit = 5
+    
+}
+
+[System.Serializable]
+public class MenuMode
+{
+    public MenuName MenuName;
+    public string MenuTitle;
+    public Text MenuButtonText;
+    public Button ModeButton;
+    public GameObject ModePanel;
     public Button BackButton;
-    public GameObject MainMenuView;
-    public void SetTitle()
+
+    public void SetButtonTitle()
     {
-        ButtonTabText.text = MainMenuTabName;
+        if(MenuButtonText == null)
+            return;
+        MenuButtonText.text = MenuTitle;
+    }
+
+    public void SetMenuPanelStatus(bool isVisible)
+    {
+        if(ModePanel == null)
+            return;
+        ModePanel.SetActive(isVisible); 
     }
 }
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private MainMenuTab[] _mainMenuTabs;
+    [SerializeField] private MenuMode[] _mainMenuModes;
     [Space]
-    [SerializeField] private ShopController _shopController;
+    [SerializeField] private MenuName _currentMenuName;
+    [SerializeField] private MenuName _startMenuName;
+
+    private MenuMode GetMenuByName(MenuName menuName)
+    {
+        for (int i = 0; i < _mainMenuModes.Length; i++)
+        {
+            if (_mainMenuModes[i].MenuName == menuName)
+            {
+                return _mainMenuModes[i];
+            }
+        }
     
-    [SerializeField] private Button _playButton;
-    [SerializeField] private Button _exitButton;
-    [SerializeField] private Button _shopButton;
-    [SerializeField] private Button[] _backButton;
+        return null;
+    }
+    //
+    // private MenuMode GetMenuByName2(MenuName menuName)
+    // {
+    //     foreach (var menuMode in _mainMenuModes)
+    //     {
+    //         if (menuMode.MenuName == menuName)
+    //         {
+    //             return menuMode;
+    //         }
+    //     }
+    //
+    //     return null;
+    // }
+    //
+    // private MenuMode GetMenuByName3(MenuName menuName)
+    // {
+    //     return  _mainMenuModes.FirstOrDefault(menu => menu.MenuName == menuName);
+    // }
     
-    private MainMenuTab _currentTab;
-    
+    //private MenuMode GetMenuByName(MenuName menuName) => _mainMenuModes.FirstOrDefault(menu => menu.MenuName == menuName);
 
     private void Awake()
     {
-        foreach (var mainMenuTab in _mainMenuTabs)
+        foreach (var menuMode in _mainMenuModes)
         {
-            mainMenuTab.SetTitle();
-            mainMenuTab.TabMainButton.onClick.AddListener(() => OnTabClicked(mainMenuTab));
-            //mainMenuTab.BackButton.onClick.AddListener(() => OnBackTabClicked(mainMenuTab));
+            menuMode.SetButtonTitle();
+            if (menuMode.ModeButton != null)
+            {
+                menuMode.ModeButton.onClick.AddListener(() => SelectMenuMode(menuMode.MenuName));
+            }
+
+            if (menuMode.BackButton != null)
+            {
+                menuMode.BackButton.onClick.AddListener(() => SelectMenuMode(MenuName.MainMenu));
+            }
+            
         }
+        
+        SelectMenuMode(_startMenuName);
+    }
 
-        // foreach (var backButton in _backButton)
-        // {
-        //     backButton.onClick.AddListener(() => OnBackTabClicked(backButton));
-        // }
-        
-        
-        _playButton.onClick.AddListener((() => Debug.LogWarning("Play button was <color=yellow>clicked</color>!")) );
-        _exitButton.onClick.AddListener((() =>
+    public void SelectMenuMode(MenuName menuNameToOpen)
+    {
+        if (_currentMenuName == menuNameToOpen)
+            return;
+
+        if (_currentMenuName != MenuName.None)
         {
-        #if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
-        }));
-        
-        _shopButton.onClick.AddListener(OnShopButtonClick);
-        
-    }
+            var previousMenu = GetMenuByName(_currentMenuName);
+            if(previousMenu != null)
+                previousMenu.SetMenuPanelStatus(false);
+        }
+        _currentMenuName = menuNameToOpen;
+        var openedMenu = GetMenuByName(_currentMenuName);
+        if(openedMenu != null)
+            openedMenu.SetMenuPanelStatus(true);
 
-    private void OnTabClicked(MainMenuTab tab)
-    {
-        tab.View.SetActive(true);
-        tab.MainMenuView.SetActive(false);
+        switch (menuNameToOpen)
+        {
+           case MenuName.Exit:
+                #if UNITY_EDITOR
+                    EditorApplication.isPlaying = false;
+                #else
+                    Application.Quit();  
+                #endif
+               break;
+           case MenuName.Play:
+               Debug.Log("Запуск игры");
+               break;
+        }
     }
-
-    // private void OnBackTabClicked(MainMenuTab backTab)
-    // {
-    //     backTab.View.SetActive(false);
-    //     backTab.MainMenuView.SetActive(true);
-    // }
-
-    private void OnShopButtonClick()
-    {
-        _shopController.SetShopActive(!_shopController.Active);
-    }
-    
 }
 
 #region TheoryOfC#

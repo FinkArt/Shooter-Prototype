@@ -54,6 +54,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\ShopController.cs" />
+     <Compile Include="Assets\Scripts\ShopSectionController.cs" />
+     <Compile Include="Assets\Scripts\ShopActivationController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

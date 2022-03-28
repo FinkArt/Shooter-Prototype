@@ -579,6 +579,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &346771226 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 151886874, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+  m_PrefabInstance: {fileID: 5378663317592368638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &393763822 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1932752246, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
@@ -998,8 +1003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23445b2f5532ce4daf71297c4e81aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _shopConfig: {fileID: 11400000, guid: 51ece05df7db3454a8d40cf75845ed2b, type: 2}
   _shopTabs:
-  - ShopSectionName: 0
+  - shopItemType: 0
     ShopTabName: "\u041C\u043E\u043D\u0435\u0442\u044B"
     TabButton: {fileID: 115863231}
     TabImage: {fileID: 992201153}
@@ -1009,7 +1015,8 @@ MonoBehaviour:
     DisableButtonSprite: {fileID: 21300000, guid: 81ba8e2842de6354a9acc79e97100985, type: 3}
     ActiveTextButtonColor: {r: 0.3207547, g: 0.22441116, b: 0.107422575, a: 1}
     DisableTextButtonColor: {r: 0.8727968, g: 0.8962264, b: 0.2325116, a: 1}
-  - ShopSectionName: 1
+    ContentHolder: {fileID: 1807339250}
+  - shopItemType: 1
     ShopTabName: "\u041A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u044B"
     TabButton: {fileID: 322026411}
     TabImage: {fileID: 1204875432}
@@ -1019,7 +1026,8 @@ MonoBehaviour:
     DisableButtonSprite: {fileID: 21300000, guid: 81ba8e2842de6354a9acc79e97100985, type: 3}
     ActiveTextButtonColor: {r: 0.3207547, g: 0.22441116, b: 0.107422575, a: 1}
     DisableTextButtonColor: {r: 0.8727968, g: 0.8962264, b: 0.2325116, a: 1}
-  - ShopSectionName: 2
+    ContentHolder: {fileID: 1650157307}
+  - shopItemType: 2
     ShopTabName: "\u0410\u0432\u0430\u0442\u0430\u0440\u043A\u0438"
     TabButton: {fileID: 1049111975}
     TabImage: {fileID: 716162449}
@@ -1029,7 +1037,8 @@ MonoBehaviour:
     DisableButtonSprite: {fileID: 21300000, guid: 81ba8e2842de6354a9acc79e97100985, type: 3}
     ActiveTextButtonColor: {r: 0.3207547, g: 0.22441116, b: 0.107422575, a: 1}
     DisableTextButtonColor: {r: 0.8727968, g: 0.8962264, b: 0.2325116, a: 1}
-  - ShopSectionName: 3
+    ContentHolder: {fileID: 1783549708}
+  - shopItemType: 3
     ShopTabName: "\u041C\u0435\u0447\u0438"
     TabButton: {fileID: 1932752245}
     TabImage: {fileID: 393763822}
@@ -1039,7 +1048,8 @@ MonoBehaviour:
     DisableButtonSprite: {fileID: 21300000, guid: 81ba8e2842de6354a9acc79e97100985, type: 3}
     ActiveTextButtonColor: {r: 0.3207547, g: 0.22441116, b: 0.107422575, a: 1}
     DisableTextButtonColor: {r: 0.8727968, g: 0.8962264, b: 0.2325116, a: 1}
-  _currentShopSectionName: 3
+    ContentHolder: {fileID: 346771226}
+  _startTabName: 0
 --- !u!4 &998988939
 Transform:
   m_ObjectHideFlags: 0
@@ -1880,6 +1890,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1650157307 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5378663318359567914, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+  m_PrefabInstance: {fileID: 5378663317592368638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1699793813 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 185500343419213086, guid: 82283f232292f7449983d52d29cbf2a6, type: 3}
@@ -1891,6 +1906,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1783549708 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 286124136, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+  m_PrefabInstance: {fileID: 5378663317592368638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1797980989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5378663317947508419, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
@@ -1902,6 +1922,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1807339250 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2078943189, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+  m_PrefabInstance: {fileID: 5378663317592368638}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1932752245 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1932752245, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
@@ -2361,6 +2386,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 937097376}
     m_Modifications:
+    - target: {fileID: 151886875, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_Spacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 151886875, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 151886875, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286124137, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_Spacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 286124137, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 286124137, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078943190, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_Spacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078943190, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2078943190, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5378663316766136100, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
       propertyPath: m_Name
       value: Shop
@@ -2455,6 +2516,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5378663317982939553, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378663318359567915, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_Spacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378663318359567915, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378663318359567915, guid: 6f4a76e5849aa154dadfc5516e8eb00b, type: 3}
+      propertyPath: m_ChildForceExpandWidth
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

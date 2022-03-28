@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbbc349f997787439424e106d237deb, type: 3}
+  m_Name: ShopConfig
+  m_EditorClassIdentifier: 
+  ItemViews:
+  - TabContent: 0
+    ViewPrefab: {fileID: 4610347855674949316, guid: b6bad0974e8294c4ea3282cfa9c28f29, type: 3}
+  - TabContent: 1
+    ViewPrefab: {fileID: 4610347855674949316, guid: 1df0c88890299db48aea76c7ef81178c, type: 3}
+  - TabContent: 2
+    ViewPrefab: {fileID: 4610347855674949316, guid: 13feb708cb83065428ba67664d006576, type: 3}
+  - TabContent: 3
+    ViewPrefab: {fileID: 4610347855674949316, guid: cc549c429ed7a5740b5d436d98b3a9c3, type: 3}
+  CoinsItems:
+  - ItemName: "\u041C\u043E\u043D\u0435\u0442\u043A\u0430"
+    ItemIcon: {fileID: 5750467979799766648, guid: 3a124cfdda2bc594b818cb80e3aa2384, type: 3}
+    Cost: 25
+    Amount: 1
+  - ItemName: "\u0413\u043E\u0440\u0441\u0442\u043A\u0430 \u043C\u043E\u043D\u0435\u0442"
+    ItemIcon: {fileID: 130420852390969696, guid: 3a124cfdda2bc594b818cb80e3aa2384, type: 3}
+    Cost: 249
+    Amount: 1000
+  - ItemName: "\u041C\u0435\u0448\u043E\u0447\u0435\u043A \u043C\u043E\u043D\u0435\u0442"
+    ItemIcon: {fileID: 2401615622528628283, guid: 3a124cfdda2bc594b818cb80e3aa2384, type: 3}
+    Cost: 1099
+    Amount: 50000
+  - ItemName: "\u0421\u0443\u043D\u0434\u0443\u043A \u043C\u043E\u043D\u0435\u0442"
+    ItemIcon: {fileID: 6990265756527191757, guid: 3a124cfdda2bc594b818cb80e3aa2384, type: 3}
+    Cost: 3099
+    Amount: 500000
+  CrystalsItems:
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    Amount: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    Amount: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    Amount: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    Amount: 0
+  SwordItems:
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    SwordLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    SwordLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    SwordLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    SwordLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    SwordLevel: 0
+  AvatarItems:
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    AvatarLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    AvatarLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    AvatarLevel: 0
+  - ItemName: 
+    ItemIcon: {fileID: 0}
+    Cost: 0
+    AvatarLevel: 0

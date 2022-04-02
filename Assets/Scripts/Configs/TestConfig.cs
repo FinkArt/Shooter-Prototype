@@ -15,10 +15,10 @@ public enum ObjectName
 public class TestConfig: ScriptableObject
 {
     
-    public bool MagicIsDone = false;
-    
-    public SpawnObject[] SpawnObjects;
-    public Enemies[] Enemies;
+    [HideInInspector] public bool MagicIsDone = false;
+    public int SomeField;
+    public List<SpawnObject> SpawnObjects;
+    public List<Enemies> Enemies;
 
 
     public void SomeMagicHere()
@@ -46,5 +46,5 @@ public class SpawnObject: TestData
 [System.Serializable]
 public class Enemies: TestData
 {
-    public List <string> EnemiesName = new List <string>();
+    public string EnemiesName;
 }

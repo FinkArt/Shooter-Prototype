@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\ShopSectionController.cs" />
      <Compile Include="Assets\Scripts\ShopActivationController.cs" />
      <Compile Include="Assets\Scripts\ShopController.cs" />
+     <Compile Include="Assets\Scripts\UI\ShopItemView.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerContentController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

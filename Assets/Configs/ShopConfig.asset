@@ -12,15 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fbbc349f997787439424e106d237deb, type: 3}
   m_Name: ShopConfig
   m_EditorClassIdentifier: 
-  ItemViews:
-  - TabContent: 0
-    ViewPrefab: {fileID: 4610347855674949316, guid: b6bad0974e8294c4ea3282cfa9c28f29, type: 3}
-  - TabContent: 1
-    ViewPrefab: {fileID: 4610347855674949316, guid: 1df0c88890299db48aea76c7ef81178c, type: 3}
-  - TabContent: 2
-    ViewPrefab: {fileID: 4610347855674949316, guid: 13feb708cb83065428ba67664d006576, type: 3}
-  - TabContent: 3
-    ViewPrefab: {fileID: 4610347855674949316, guid: cc549c429ed7a5740b5d436d98b3a9c3, type: 3}
+  ItemViewPrefab: {fileID: 5339899981136599238, guid: 13feb708cb83065428ba67664d006576, type: 3}
   CoinsItems:
   - ItemName: "\u041C\u043E\u043D\u0435\u0442\u043A\u0430"
     ItemIcon: {fileID: 5750467979799766648, guid: 3a124cfdda2bc594b818cb80e3aa2384, type: 3}
@@ -39,57 +31,65 @@ MonoBehaviour:
     Cost: 3099
     Amount: 500000
   CrystalsItems:
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    Amount: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    Amount: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    Amount: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    Amount: 0
+  - ItemName: "\u041A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u0438\u0449\u0435"
+    ItemIcon: {fileID: 4706851001042974040, guid: 8046a503af4c0e8499f209098e126a14, type: 3}
+    Cost: 10
+    Amount: 1
+  - ItemName: "\u0413\u043E\u0440\u0441\u0442\u043A\u0430 \u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u043E\u0432"
+    ItemIcon: {fileID: 2919088111807463421, guid: 8046a503af4c0e8499f209098e126a14, type: 3}
+    Cost: 20
+    Amount: 5
+  - ItemName: "\u041C\u0435\u0448\u043E\u043A \u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u043E\u0432"
+    ItemIcon: {fileID: -7214019685046724163, guid: 8046a503af4c0e8499f209098e126a14, type: 3}
+    Cost: 50
+    Amount: 15
+  - ItemName: "\u041C\u043D\u043E\u0433\u043E \u043C\u043D\u043E\u0433\u043E \u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u043E\u0432"
+    ItemIcon: {fileID: 2714627853549260909, guid: 8046a503af4c0e8499f209098e126a14, type: 3}
+    Cost: 500
+    Amount: 30
+  - ItemName: "\u041A\u0443\u0447\u0430 \u043A\u0440\u0438\u0441\u0442\u0430\u043B\u043B\u043E\u0432"
+    ItemIcon: {fileID: -4978066125871441561, guid: 8046a503af4c0e8499f209098e126a14, type: 3}
+    Cost: 5000
+    Amount: 100
   SwordItems:
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    SwordLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    SwordLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    SwordLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    SwordLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    SwordLevel: 0
+  - ItemName: "\u0422\u043E\u043F\u043E\u0440"
+    ItemIcon: {fileID: -8099290429730482371, guid: 1442c24b811147e4081ec9ca5dc945dd, type: 3}
+    Cost: 50
+    SwordLevel: 1
+  - ItemName: "\u041C\u0435\u0447"
+    ItemIcon: {fileID: -5219633539014828229, guid: 1442c24b811147e4081ec9ca5dc945dd, type: 3}
+    Cost: 500
+    SwordLevel: 2
+  - ItemName: "\u0421\u0435\u043A\u0438\u0440\u0430"
+    ItemIcon: {fileID: -4229615451549251593, guid: 1442c24b811147e4081ec9ca5dc945dd, type: 3}
+    Cost: 1500
+    SwordLevel: 3
+  - ItemName: "\u041C\u043E\u0449\u043D\u0430\u044F \u0441\u0435\u043A\u0438\u0440\u0430"
+    ItemIcon: {fileID: 8874317435539260147, guid: 1442c24b811147e4081ec9ca5dc945dd, type: 3}
+    Cost: 5000
+    SwordLevel: 4
+  - ItemName: "\u0410\u043B\u043C\u0430\u0437\u043D\u044B\u0439 \u043A\u043B\u0438\u043D\u043E\u043A"
+    ItemIcon: {fileID: 9032444290793150041, guid: 1442c24b811147e4081ec9ca5dc945dd, type: 3}
+    Cost: 15000
+    SwordLevel: 5
+  - ItemName: "\u0412\u043E\u043B\u0448\u0435\u0431\u043D\u044B\u0439 \u0442\u043E\u043F\u043E\u0440"
+    ItemIcon: {fileID: 2163042080039722274, guid: 1442c24b811147e4081ec9ca5dc945dd, type: 3}
+    Cost: 50000
+    SwordLevel: 6
   AvatarItems:
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    AvatarLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    AvatarLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    AvatarLevel: 0
-  - ItemName: 
-    ItemIcon: {fileID: 0}
-    Cost: 0
-    AvatarLevel: 0
+  - ItemName: "\u0410\u0432\u0430\u0442\u0430\u0440 1"
+    ItemIcon: {fileID: 5223541197691511223, guid: 2f61b9ac0551c214e84dce49850a6297, type: 3}
+    Cost: 100
+    AvatarLevel: 1
+  - ItemName: "\u0410\u0432\u0430\u0442\u0430\u0440 2"
+    ItemIcon: {fileID: -8091456160083057056, guid: 2f61b9ac0551c214e84dce49850a6297, type: 3}
+    Cost: 500
+    AvatarLevel: 2
+  - ItemName: "\u0410\u0432\u0430\u0442\u0430\u0440 3"
+    ItemIcon: {fileID: -8716129721606780576, guid: 2f61b9ac0551c214e84dce49850a6297, type: 3}
+    Cost: 2000
+    AvatarLevel: 3
+  - ItemName: "\u0410\u0432\u0430\u0442\u0430\u0440 4"
+    ItemIcon: {fileID: -4465793459905465630, guid: 2f61b9ac0551c214e84dce49850a6297, type: 3}
+    Cost: 5000
+    AvatarLevel: 4

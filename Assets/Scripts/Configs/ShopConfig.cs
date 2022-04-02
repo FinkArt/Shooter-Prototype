@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ShopConfig", menuName = "OurTools/ShopConfig", order = 1)]
 public class ShopConfig : ScriptableObject
 {
-    public ShopSectionItemView[] ItemViews;
+    public ShopItemView ItemViewPrefab;
     [Space]
     [Header("Shop items")]
     public CurrencyItem[] CoinsItems;
@@ -16,22 +16,8 @@ public class ShopConfig : ScriptableObject
     public SwordData[] SwordItems;
     [Space]
     public AvatarData[] AvatarItems;
-
-    public GameObject GetItemView(ShopItemType itemType)
-    {
-        foreach (var itemView in ItemViews)
-            if (itemView.TabContent == itemType)
-                return itemView.ViewPrefab;
-        return null;
-    }
 }
 
-[System.Serializable]
-public class ShopSectionItemView
-{
-    public ShopItemType TabContent;
-    public GameObject ViewPrefab;
-}
 
 [System.Serializable]
 public class ShopItemBase

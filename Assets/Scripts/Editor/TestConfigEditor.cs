@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +11,29 @@ public class TestConfigEditor : Editor
     public override void OnInspectorGUI()
     {
         var config = (TestConfig) target; //получаем доступ ко всем существующим элементам файла TestConfig
-        DrawDefaultInspector(); // в инспекторе выводим все элементы TestConfig
+        //DrawDefaultInspector(); // в инспекторе выводим все элементы TestConfig
         GUILayout.Space(20);
-
+        if(!config.MagicIsDone)
+            config.SomeField = EditorGUILayout.IntField("Some description", config.SomeField);
+        if (GUILayout.Button("+"))
+        {
+            
+            config.Enemies.Add(new Enemies());
+    
+        }
+        foreach (var enemy in config.Enemies.ToList())
+        {
+            EditorGUILayout.BeginVertical("Box");
+            if (GUILayout.Button("-"))
+            {
+            
+                config.Enemies.Remove(enemy);
+    
+            }
+            enemy.EnemiesName = EditorGUILayout.TextField("Some description", enemy.EnemiesName);
+            EditorGUILayout.EndVertical();
+            EditorGUILayout.Space(5f);
+        }
         if (config.MagicIsDone)
         {
             EditorGUILayout.HelpBox("You are cool one", MessageType.Info);

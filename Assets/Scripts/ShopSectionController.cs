@@ -65,7 +65,7 @@ using UnityEngine.UI;
         [SerializeField] private ShopConfig _shopConfig;
         [SerializeField] private ShopTab[] _shopTabs;
         [SerializeField] private ShopItemType _startTabName;
-        
+
         private ShopItemType _currentShopItemType = ShopItemType.None;
         
         private void Awake()
@@ -85,38 +85,48 @@ using UnityEngine.UI;
         {
             foreach (var shopTab in _shopTabs)
             {
-                var viewPrefab = _shopConfig.GetItemView(shopTab.shopItemType);
+                var viewPrefab = _shopConfig.ItemViewPrefab;
                 switch (shopTab.shopItemType)
                 {
                     case ShopItemType.Coins:
                         var coinsItems = _shopConfig.CoinsItems;
+                     
                         foreach (var coinsItem in coinsItems)
                         {
                             var newTabObject = Instantiate(viewPrefab, shopTab.ContentHolder);
+                            newTabObject.ApplyCurrencyItemData(coinsItem);
                         }
                         break;
                     case ShopItemType.Avatars:
                         var avatarsItems = _shopConfig.AvatarItems;
+                   
                         foreach (var avatarsItem in avatarsItems)
                         {
                             var newTabObject = Instantiate(viewPrefab, shopTab.ContentHolder);
+                            newTabObject.ApplyAvatarsData(avatarsItem);
                         }
                         break;
                     case ShopItemType.Crystals:
                         var crystalsItems = _shopConfig.CrystalsItems;
+                     
                         foreach (var crystalsItem in crystalsItems)
                         {
                             var newTabObject = Instantiate(viewPrefab, shopTab.ContentHolder);
+                            newTabObject.ApplyCurrencyItemData(crystalsItem);
                         }
                         break;
                     case ShopItemType.Swords:
                         var swordsItems = _shopConfig.SwordItems;
+                
                         foreach (var swordItem in swordsItems)
                         {
                             var newTabObject = Instantiate(viewPrefab, shopTab.ContentHolder);
+                            newTabObject.ApplySwordData(swordItem);
                         }
                         break;
                 }
+                // var totalSize = _shopTabSize * elements;
+                // shopTab.ContentHolder.sizeDelta = new Vector2(totalSize, shopTab.ContentHolder.sizeDelta.y);
             }
         }
 

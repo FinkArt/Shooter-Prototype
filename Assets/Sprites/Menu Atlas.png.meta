@@ -43,7 +43,7 @@ TextureImporter:
     second: Menu Atlas_12
   - first:
       213: 5310913479100219558
-    second: Menu Atlas_13
+    second: Volume Slider
   - first:
       213: 6640102235457399390
     second: Menu Atlas_14
@@ -139,7 +139,7 @@ TextureImporter:
     second: Menu Atlas_44
   - first:
       213: -1455488863725795813
-    second: Menu Atlas_45
+    second: Volume Slider 1
   - first:
       213: 399311936665435734
     second: Menu Atlas_46
@@ -550,7 +550,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu Atlas_13
+      name: Volume Slider
       rect:
         serializedVersion: 2
         x: 1683
@@ -1222,7 +1222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu Atlas_45
+      name: Volume Slider 1
       rect:
         serializedVersion: 2
         x: 316

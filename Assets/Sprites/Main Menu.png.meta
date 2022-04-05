@@ -7,7 +7,7 @@ TextureImporter:
     second: Main Menu_0
   - first:
       213: 2798250516866983683
-    second: Main Menu_1
+    second: Toggle Checkmark
   - first:
       213: 6936311897552531074
     second: Main Menu_2
@@ -37,7 +37,7 @@ TextureImporter:
     second: Main Menu_10
   - first:
       213: -4659858343778866989
-    second: Main Menu_11
+    second: Toggle bg
   - first:
       213: 1574988882871425895
     second: Main Menu_12
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Menu_1
+      name: Toggle Checkmark
       rect:
         serializedVersion: 2
         x: 198
@@ -391,7 +391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Main Menu_11
+      name: Toggle bg
       rect:
         serializedVersion: 2
         x: 1059

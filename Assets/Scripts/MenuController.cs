@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
 public enum MenuName
@@ -35,18 +36,26 @@ public class MenuMode
     {
         if(ModePanel == null)
             return;
-        ModePanel.SetActive(isVisible); 
+        ModePanel.SetActive(isVisible);
     }
 }
 
 public class MenuController : MonoBehaviour
 {
+
+    public class SomeClass
+    {
+        public int A;
+    }
     [SerializeField] private MenuMode[] _mainMenuModes;
     [Space]
     [SerializeField] private MenuName _currentMenuName;
     [SerializeField] private MenuName _startMenuName;
 
-    private MenuMode GetMenuByName(MenuName menuName)
+    [SerializeField] private Dropdown _graphicsSettings;
+    [SerializeField] private Toggle _volumeActivate;
+    
+   private MenuMode GetMenuByName(MenuName menuName)
     {
         for (int i = 0; i < _mainMenuModes.Length; i++)
         {

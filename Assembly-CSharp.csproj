@@ -52,15 +52,27 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Configs\TestConfig.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\SettingController.cs" />
+     <Compile Include="Assets\Scripts\Configs\HealthConfig.cs" />
      <Compile Include="Assets\Scripts\Configs\ShopConfig.cs" />
-     <Compile Include="Assets\Scripts\PlayerContentController.cs" />
-     <Compile Include="Assets\Scripts\MenuController.cs" />
-     <Compile Include="Assets\Scripts\ShopSectionController.cs" />
-     <Compile Include="Assets\Scripts\ShopActivationController.cs" />
-     <Compile Include="Assets\Scripts\ShopController.cs" />
-     <Compile Include="Assets\Scripts\UI\ShopItemView.cs" />
-     <Compile Include="Assets\Scripts\SettingController.cs" />
+     <Compile Include="Assets\Scripts\HealthUIManager.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ButtonView.cs" />
+     <Compile Include="Assets\Scripts\Pause Menu\PauseMenuActivation.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\PlayerContentController.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\MenuController.cs" />
+     <Compile Include="Assets\Scripts\Pause Menu\PauseMenuController.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\ShopSectionController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameplayController.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\ShopActivationController.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\ShopController.cs" />
+     <Compile Include="Assets\Scripts\Calculator.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\UI\ShopItemView.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\HealthComponent.cs" />
+     <Compile Include="Assets\Scripts\Utility\LookAt.cs" />
+     <Compile Include="Assets\Scripts\UI\HealthBarView.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\HealthBarManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

@@ -24,4 +24,11 @@ public class HealthBarView : MonoBehaviour
     {
         _healthBarLine.fillAmount = health;
     }
+
+    public void DestroyBar()
+    {
+        Destroy(gameObject);
+        Debug.Log("destroy health bar");
+    }
+    
 }

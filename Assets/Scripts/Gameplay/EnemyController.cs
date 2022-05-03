@@ -20,13 +20,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _attackDelay;
 
     private float _nextAttackTime;
-    
-    public static event Action<EnemyController> OnBotSpawned;
 
-    private void Awake()
+    private void Start()
     {
-        _navMesh = GetComponent<NavMeshAgent>();
-        OnBotSpawned?.Invoke(this);
+        _navMesh = GetComponent<NavMeshAgent>(); 
     }
 
     private void FindTarget()

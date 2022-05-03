@@ -50,7 +50,8 @@ public class HealthComponent : MonoBehaviour
         if (_health <= 0f)
         {
             _health = 0f;
-            Dead();
+            _isDead = true;
+            Destroy(gameObject);
             OnDead?.Invoke();
         }
     }
@@ -71,10 +72,5 @@ public class HealthComponent : MonoBehaviour
                 _nextRegenerationTime = Time.time + _regenerationDelay;
             }
         }
-    }
-
-    private void Dead()
-    {
-        _isDead = true;
     }
 }

@@ -5,64 +5,69 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public interface IInputManager
-{
-    event Action<Vector2> OnMoveInput;
-    event Action<Vector2> OnLookInput;
-    void OnUpdate();
-}
+// public interface IInputManager
+// {
+//     event Action<Vector2> OnMoveInput;
+//     event Action<Vector2> OnLookInput;
+//     event Action OnJumpInput;
+//     void OnUpdate();
+// }
+//
+// public class PCInputManager : IInputManager
+// {
+    // public event Action<Vector2> OnMoveInput;
+    // public event Action<Vector2> OnLookInput;
+    // public event Action OnJumpInput; 
+    //
+    // public void OnUpdate()
+    // {
+    //     var horizontalInput = Input.GetAxis("Horizontal"); // 1 0 -1 A = -1, D = 1, <- = -1, -> = 1
+    //     var verticalInput = Input.GetAxis("Vertical");
+    //     var mouseX = Input.GetAxis("Mouse X");
+    //     var mouseY = Input.GetAxis("Mouse Y");
+    //
+    //     var mouseInput = new Vector2(mouseX, mouseY);
+    //     if(mouseInput.magnitude > 0)
+    //     {
+    //         OnLookInput?.Invoke(mouseInput);
+    //     }
+    //
+    //     var dist = 4f * 4f;
+    //     if (mouseInput.sqrMagnitude < dist)
+    //     {
+    //         
+    //     }
+    //     
+    //     
+    //
+    //     var moveInput = new Vector2(horizontalInput, verticalInput);
+    //     if (moveInput.magnitude > 0)
+    //     {
+    //         OnMoveInput?.Invoke(moveInput);
+    //     }
+    //
+    //     if (Input.GetButtonDown("Jump"))
+    //     {
+    //         OnJumpInput?.Invoke();
+    //     }
+    // }
+//}
 
-
-public class PCInputManager : IInputManager
-{
-    public event Action<Vector2> OnMoveInput;
-    public event Action<Vector2> OnLookInput;
-
-    public void OnUpdate()
-    {
-        var horizontalInput = Input.GetAxis("Horizontal"); // 1 0 -1 A = -1, D = 1, <- = -1, -> = 1
-        var verticalInput = Input.GetAxis("Vertical");
-        var mouseX = Input.GetAxis("Mouse X");
-        var mouseY = Input.GetAxis("Mouse Y");
-
-        var mouseInput = new Vector2(mouseY, mouseY);
-        if(mouseInput.magnitude > 0)
-        {
-            OnLookInput?.Invoke(mouseInput);
-        }
-
-        var moveInput = new Vector2(horizontalInput, verticalInput);
-        if (moveInput.magnitude > 0)
-        {
-            OnMoveInput?.Invoke(moveInput);
-        }
-    }
-}
-
-public class TouchInputManager : IInputManager
-{
-    public event Action<Vector2> OnMoveInput;
-    public event Action<Vector2> OnLookInput;
-
-    public void OnUpdate()
-    {
-    
-    }
-}
-
-//Human Vasya 190 75 
-//IHuman Name Height Weight
-
+// public class TouchInputManager : IInputManager
+// {
+//     public event Action<Vector2> OnMoveInput;
+//     public event Action<Vector2> OnLookInput;
+//     public event Action OnJumpInput;
+//
+//     public void OnUpdate()
+//     {
+//     
+//     }
+// }
 
 public class PlayerController : MonoBehaviour
 {
-    private IInputManager _inputManager;
-
     [SerializeField] private Camera _cam;
-
-    // [SerializeField]
-    // private Transform _moveToPoint;
-
     [SerializeField] private HealthComponent _healthComponent;
 
     public HealthComponent Health => _healthComponent;
@@ -79,58 +84,51 @@ public class PlayerController : MonoBehaviour
     private float _currentAngle;
     [SerializeField] private float _gravityValue = -9.81f;
     
+    
     private void Start()
     {
-        _inputManager = new PCInputManager();
-
-        _inputManager.OnMoveInput += OnInputMove;
-        _inputManager.OnLookInput += OnInputLook;
-
+        InputManager.Instance.OnMoveInput += OnInputMove;
+        InputManager.Instance.OnLookInput += OnInputLook;
+        InputManager.Instance.OnJumpInput += OnInputJump;
+       
         _currentAngle = _cam.transform.eulerAngles.x;
         OnPlayerSpawned?.Invoke(this);
     }
 
     private void OnInputLook(Vector2 lookInput)
     {
-
-    }
-
-    private void OnInputMove(Vector2 moveInput)
-    {
-
-    }
-
-    private void Update()
-    {
-
-        _inputManager?.OnUpdate();
-
-        var horizontalInput = Input.GetAxis("Horizontal"); // 1 0 -1 A = -1, D = 1, <- = -1, -> = 1
-        var verticalInput = Input.GetAxis("Vertical");
-        var mouseX = Input.GetAxis("Mouse X");
-        var mouseY = Input.GetAxis("Mouse Y");
-      
-        var moveInput = new Vector3(horizontalInput, 0f, verticalInput);
-        var moveDir = moveInput * _moveSpeed;
-        
+        var mouseX = lookInput.x;
+        var mouseY = lookInput.y;
         transform.eulerAngles += new Vector3(0f, mouseX * _camSenseX, 0f);
         _currentAngle += -mouseY * _camSenseY;
         _currentAngle = Mathf.Clamp(_currentAngle, _minAngle, _maxAngle);
         _cam.transform.rotation = Quaternion.Euler(new Vector3(_currentAngle, _cam.transform.eulerAngles.y, _cam.transform.eulerAngles.z));
-        //moveDir.y += Physics.gravity.y;
-        if (Input.GetButtonDown("Jump") && _characterController.isGrounded)
+    }
+
+    private void OnInputMove(Vector2 moveInput)
+    {
+        var horizontalMove = new Vector3(moveInput.x, 0f, moveInput.y);
+        var moveDir = horizontalMove * _moveSpeed;
+        _characterController.Move(transform.TransformDirection(moveDir));
+    }
+
+    private void OnInputJump()
+    {
+        var moveDir = new Vector3(0f, 0f, 0f);
+        Debug.Log(_characterController.isGrounded);
+        //if (_characterController.isGrounded)
         {
             moveDir.y += _jumpSpeed;
+            
         }
-
-        moveDir.y += _gravityValue * Time.deltaTime;
-        if (_characterController.isGrounded && moveDir.y < 0f)
-        {
-            moveDir.y = 0f;
-        }
+        // moveDir.y += _gravityValue * Time.deltaTime;
+        
+        // if (!_characterController.isGrounded || moveDir.y < 0f)
+        // {
+        //     moveDir.y = 0f;
+        // }
         _characterController.Move(transform.TransformDirection(moveDir));
-        //todo: jump
-    }
+    }  
 
    
 }

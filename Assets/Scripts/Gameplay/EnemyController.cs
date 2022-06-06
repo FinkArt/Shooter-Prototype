@@ -18,12 +18,15 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float _maxDamage = 15f;
     [SerializeField] private float _attackDistance = 2f;
     [SerializeField] private float _attackDelay;
+    private Animator _animator;
 
     private float _nextAttackTime;
 
     private void Start()
     {
-        _navMesh = GetComponent<NavMeshAgent>(); 
+        _navMesh = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
+
     }
 
     private void FindTarget()
@@ -52,6 +55,7 @@ public class EnemyController : MonoBehaviour
     {
         if (Time.time >= _nextAttackTime)
         {
+            _animator.SetTrigger("Attack");
             var damage = Random.Range(_minDamage, _maxDamage);
             _target.Health.ApplyDamage(damage);
             _nextAttackTime = Time.time + _attackDelay;

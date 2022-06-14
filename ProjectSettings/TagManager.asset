@@ -5,6 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Brick
+  - Concrete
+  - Dirt
+  - Flesh
+  - Foilage
+  - Glass
+  - Metal
+  - Mud
+  - Paper
+  - Plaster
+  - Plastic
+  - Sand
+  - Stone
+  - Water
+  - Wood
   layers:
   - Default
   - TransparentFX

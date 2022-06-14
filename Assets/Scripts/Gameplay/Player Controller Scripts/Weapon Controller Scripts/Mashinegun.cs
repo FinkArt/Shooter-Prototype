@@ -10,8 +10,6 @@ public class Mashinegun : WeaponBase
     protected override void Update()
     {
         base.Update();
-        if (_move)
-            animator.SetBool("Walk", true);
-        Debug.Log($"walk {_move}");
+        animator.SetBool("Walk", _move);
     }
 }

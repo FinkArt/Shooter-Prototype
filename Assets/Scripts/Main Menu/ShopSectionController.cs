@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Configs.Shop;
+using Configs.Weapons;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;

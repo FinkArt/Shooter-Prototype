@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using Gameplay.Player_Controller_Scripts.Weapon_Controller_Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,7 +36,7 @@ public class WeaponsManager : MonoBehaviour, IWeaponsManager
 
     public event Action<int, int> OnWeaponAmmoInfoChanged;
     public event Action<string, Sprite> OnWeaponChanged;
-
+    
     private Coroutine _changeWeaponCoroutine;
 
     private bool _isChangeWeapon;
@@ -47,27 +49,7 @@ public class WeaponsManager : MonoBehaviour, IWeaponsManager
         _inputManager.OnWeaponChangeKeyInput += SelectWeapon;
         _inputManager.OnPrevWeaponInput += SelectPreviousWeapon;
         _inputManager.OnWeaponChangeScrollMouseInput += ScrollMouse;
-        //var cube = GameObject.CreatePrimitive(PrimitiveType.Capsule);
     }
-
-    
-    // [SerializeField] private AnimationCurve _curve;
-    // [SerializeField] private float _speed;
-    // [SerializeField] private float _moveTime;
-    // private IEnumerator MoveObject(GameObject obj)
-    // {
-    //     float time = 0;
-    //     while (true)
-    //     {
-    //         time += Time.deltaTime;
-    //         if (time >= _moveTime)
-    //             time = 0f;
-    //         var x = time;
-    //         var y = _curve.Evaluate(time / _moveTime);
-    //         obj.transform.position = new Vector3(x, y, 0) * _speed;
-    //         yield return null;
-    //     }   
-    // }
     
     private int GetWeaponIdxWithShift(int shift)
     {
@@ -165,4 +147,5 @@ public class WeaponsManager : MonoBehaviour, IWeaponsManager
     {
         OnWeaponAmmoInfoChanged?.Invoke(bullets, clips);
     }
+    
 }

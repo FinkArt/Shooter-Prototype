@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Configs.Shop
+namespace Configs.Weapons
 {
     [CreateAssetMenu(fileName = "ShopConfig", menuName = "OurTools/ShopConfig", order = 1)]
     public class ShopConfig : ScriptableObject

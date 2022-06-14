@@ -1,23 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Configs.Weapons;
+using Gameplay.Player_Controller_Scripts.Weapon_Controller_Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class WeaponBase : MonoBehaviour
 {
-    [SerializeField] protected WeaponName _weaponName;
-    //[SerializeField] protected string weaponName;
-    [SerializeField] protected Sprite weaponImage;
-    [SerializeField] protected int bullets = 30;
-    [SerializeField] protected int bulletsPerClip = 30;
-    [SerializeField] protected int clips = 120;
-    [SerializeField] protected float _reloadingTime = 2;
-    [SerializeField] protected float _drawTime = 1f;
-    [SerializeField] protected float _hideTime = 1;
-    [SerializeField] protected float _fireDelay = 0.2f;
+    
+    [SerializeField] protected Camera _cam;
+    [SerializeField] private WeaponName _weaponName;
+    
+    protected WeaponData CurrentWeaponData;
+    
     protected Animator animator;
     protected InputManager _inputManager;
+
+   
 
     public bool IsBusy => isBusy; 
     
@@ -29,8 +29,8 @@ public abstract class WeaponBase : MonoBehaviour
     private Coroutine _reloadCoroutine;
     private Coroutine _drawHideCoroutine;
 
-    public WeaponName WeaponName => _weaponName;
-    public Sprite WeaponImage => weaponImage;
+    public WeaponName WeaponName => CurrentWeaponData.WeaponName;
+    public Sprite WeaponImage => CurrentWeaponData.WeaponImage;
 
     public event Action<int, int> OnChangedBullets;
     public event Action<WeaponBase, bool> OnWeaponActivationChanged;
@@ -38,6 +38,7 @@ public abstract class WeaponBase : MonoBehaviour
     protected void Awake()
     {
         animator = GetComponent<Animator>();
+        CurrentWeaponData = ConfigHolder.Instance.WeaponDataConfig.GetWeaponDataByName(_weaponName);
     }
 
     protected virtual void Start()
@@ -46,7 +47,7 @@ public abstract class WeaponBase : MonoBehaviour
         _inputManager.OnJumpInput += OnJump;
         _inputManager.OnMoveInput += OnMove;
         _inputManager.OnRunInput += OnRun;
-        OnChangedBullets?.Invoke(bullets, clips);
+        OnChangedBullets?.Invoke(CurrentWeaponData.Bullets, CurrentWeaponData.Clips);
     }
 
     #region Input
@@ -54,6 +55,7 @@ public abstract class WeaponBase : MonoBehaviour
     private void OnMove(Vector2 moveInput)
     {
         _move = moveInput.magnitude > 0f;
+        
     }
 
     private void OnJump()
@@ -95,7 +97,7 @@ public abstract class WeaponBase : MonoBehaviour
         if(isReloading || _run || isBusy)
             return;
         
-        if (bullets <= 0)
+        if (CurrentWeaponData.Bullets <= 0)
         {
             _reloadCoroutine = StartCoroutine(ReloadInternal());
             return;
@@ -103,42 +105,57 @@ public abstract class WeaponBase : MonoBehaviour
 
         if (Time.time > nextShotTime)
         {
+            FireRaycast();
+            CurrentWeaponData.MuzzleFlash.Play();
             animator.SetTrigger("Fire");
-            bullets--;
-            nextShotTime = Time.time + _fireDelay;
+            CurrentWeaponData.Bullets--;
+            nextShotTime = Time.time + CurrentWeaponData.FireDelay;
+        }
+    }
+
+    protected void FireRaycast()
+    {
+        var impactsConfig = ConfigHolder.Instance.WeaponImpactConfig;
+        var ray = _cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        if (Physics.Raycast(ray, out var hitInfo, CurrentWeaponData.FireDistance, CurrentWeaponData.FireMask))
+        {
+            var tag = hitInfo.transform.gameObject.tag;
+            var impactVFX = impactsConfig.GetImpactByTag(tag);
+            var impact = Instantiate(impactVFX.VFX, hitInfo.point,  Quaternion.LookRotation(hitInfo.normal, Vector3.up));
+            Destroy(impact.gameObject, impactsConfig.ImpactLifetime);
         }
     }
 
     private void FireInternal()
     {
         Fire();
-        OnChangedBullets?.Invoke(bullets, clips);
+        OnChangedBullets?.Invoke(CurrentWeaponData.Bullets, CurrentWeaponData.Clips);
     }
 
     private IEnumerator ReloadInternal()
     {
         yield return StartCoroutine(Reload());
-        OnChangedBullets?.Invoke(bullets, clips);
+        OnChangedBullets?.Invoke(CurrentWeaponData.Bullets, CurrentWeaponData.Clips);
     }
 
     protected virtual IEnumerator Reload()
     {
-        var canReload = bullets < bulletsPerClip && clips > 0;
+        var canReload = CurrentWeaponData.Bullets < CurrentWeaponData.BulletsPerClip && CurrentWeaponData.Clips > 0;
         if (canReload)
         {
             isReloading = true;
             animator.SetTrigger("Reload");
-            yield return new WaitForSeconds(_reloadingTime);
-            var toAdd = bulletsPerClip - bullets;
-            if (clips >= toAdd)
+            yield return new WaitForSeconds(CurrentWeaponData.ReloadingTime);
+            var toAdd = CurrentWeaponData.BulletsPerClip - CurrentWeaponData.Bullets;
+            if (CurrentWeaponData.Clips >= toAdd)
             {
-                bullets += toAdd;
-                clips -= toAdd;
+                CurrentWeaponData.Bullets += toAdd;
+                CurrentWeaponData.Clips -= toAdd;
             }
             else
             {
-                clips = 0;
-                bullets += clips;
+                CurrentWeaponData.Clips = 0;
+                CurrentWeaponData.Bullets += CurrentWeaponData.Clips;
             }
 
             _reloadCoroutine = null;
@@ -171,7 +188,7 @@ public abstract class WeaponBase : MonoBehaviour
     private IEnumerator PlayDrawHide(bool draw)
     {
         var triggerName = draw ? "Draw" : "Hide";
-        var waitTime = draw ? _drawTime : _hideTime;
+        var waitTime = draw ? CurrentWeaponData.DrawTime : CurrentWeaponData.HideTime;
         animator.SetTrigger(triggerName);
         isBusy = true;
         yield return new WaitForSeconds(waitTime);
@@ -193,7 +210,7 @@ public abstract class WeaponBase : MonoBehaviour
 
     private void OnEnableAction()
     {
-        OnChangedBullets?.Invoke(bullets, clips);
+        OnChangedBullets?.Invoke(CurrentWeaponData.Bullets, CurrentWeaponData.Clips);
         OnWeaponActivationChanged?.Invoke(this, true);
     }
 }

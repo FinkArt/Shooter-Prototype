@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ed5d840ae907a40b8fb517f9173a66, type: 3}
+  m_Name: WeaponImpactConfig
+  m_EditorClassIdentifier: 
+  _impactsData:
+  - GroundTag: Brick
+    VFX: {fileID: 19800002, guid: a002c8d5446bcbc46ba1208c3d21c6b6, type: 3}
+    IsDefault: 0
+  - GroundTag: Concrete
+    VFX: {fileID: 19800000, guid: cae283c880c5e9a4593b474dfbcb3154, type: 3}
+    IsDefault: 0
+  - GroundTag: Dirt
+    VFX: {fileID: 19800002, guid: f93f3f64c93ad61449d7d45134840955, type: 3}
+    IsDefault: 1
+  - GroundTag: Flesh
+    VFX: {fileID: 19800000, guid: ba52805fd6eec8247b4d8496058700d5, type: 3}
+    IsDefault: 0
+  - GroundTag: Foilage
+    VFX: {fileID: 19800000, guid: a5d226920b6c6a843800e530c6342ecc, type: 3}
+    IsDefault: 0
+  - GroundTag: Glass
+    VFX: {fileID: 19800000, guid: b65206c2c5e319544b9c3a9a347f6fcd, type: 3}
+    IsDefault: 0
+  - GroundTag: Metal
+    VFX: {fileID: 19800006, guid: 7e39de0af1681954b9dd97d5ab3cf899, type: 3}
+    IsDefault: 0
+  - GroundTag: Mud
+    VFX: {fileID: 19800004, guid: 4215b1cf469275542893a35dc313bda4, type: 3}
+    IsDefault: 0
+  - GroundTag: Paper
+    VFX: {fileID: 19800006, guid: f1dbf7c0d57de2944ac924cdfe83ea28, type: 3}
+    IsDefault: 0
+  - GroundTag: Plaster
+    VFX: {fileID: 19800004, guid: df36cc7677c5ab744968ae54aadb176c, type: 3}
+    IsDefault: 0
+  - GroundTag: Plastic
+    VFX: {fileID: 19800000, guid: eea0d846c8f9d9d49992c19aa2141851, type: 3}
+    IsDefault: 0
+  - GroundTag: Sand
+    VFX: {fileID: 19800002, guid: 041cc7203d3b76145ac967322127a380, type: 3}
+    IsDefault: 0
+  - GroundTag: Stone
+    VFX: {fileID: 19800002, guid: 54dd9cb5740188a488b8baebbf19207c, type: 3}
+    IsDefault: 0
+  - GroundTag: Water
+    VFX: {fileID: 19800002, guid: 16cd485f3159b664b85143d6ec53f916, type: 3}
+    IsDefault: 0
+  - GroundTag: Wood
+    VFX: {fileID: 19800002, guid: 28bbf9615a4fa9a4f906305297d89b0a, type: 3}
+    IsDefault: 0
+  _impactLifetime: 2

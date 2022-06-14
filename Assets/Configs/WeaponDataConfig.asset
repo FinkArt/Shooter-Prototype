@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171e357ab60883d47a8d450adadd6344, type: 3}
+  m_Name: WeaponDataConfig
+  m_EditorClassIdentifier: 
+  WeaponData:
+  - NameWeapon: Gun
+    WeaponName: 2
+    WeaponImage: {fileID: 21300000, guid: c7077360efdb9aa49986adbbf5212214, type: 3}
+    Bullets: 4
+    BulletsPerClip: 12
+    Clips: 24
+    ReloadingTime: 2
+    DrawTime: 1
+    HideTime: 1
+    FireDelay: 0.6
+    FireDistance: 250
+    FireMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    MuzzleFlash: {fileID: 19800000, guid: 8ca108f3221ec4742b36d297de52f591, type: 3}
+  - NameWeapon: Mashinegun
+    WeaponName: 0
+    WeaponImage: {fileID: 21300000, guid: 371da7717c3dbeb429445639cd9b61de, type: 3}
+    Bullets: 30
+    BulletsPerClip: 30
+    Clips: 64
+    ReloadingTime: 3
+    DrawTime: 1
+    HideTime: 1
+    FireDelay: 0.35
+    FireDistance: 400
+    FireMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    MuzzleFlash: {fileID: 19800004, guid: d9554d8af43d40846969c975137a4565, type: 3}
+  - NameWeapon: Shot Gun
+    WeaponName: 1
+    WeaponImage: {fileID: 21300000, guid: c933f3df5616b4243aeecfbc20b08c64, type: 3}
+    Bullets: 2
+    BulletsPerClip: 5
+    Clips: 15
+    ReloadingTime: 0.9
+    DrawTime: 1
+    HideTime: 1
+    FireDelay: 0.85
+    FireDistance: 100
+    FireMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    MuzzleFlash: {fileID: 19800004, guid: ecf58ecd741f4cd4b8e0291606296f10, type: 3}

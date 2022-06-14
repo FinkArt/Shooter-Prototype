@@ -13,8 +13,6 @@ public class InputManager : Singleton<InputManager>
     public event Action<float> OnWeaponChangeScrollMouseInput;
     public event Action OnPrevWeaponInput; 
     
-    
-
     private bool _run;
     
     public void Update()

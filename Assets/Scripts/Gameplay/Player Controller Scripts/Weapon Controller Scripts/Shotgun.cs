@@ -7,20 +7,20 @@ public class Shotgun : WeaponBase
 {
     protected override IEnumerator Reload()
     {
-        var canReload = bullets < bulletsPerClip && clips > 0;
+        var canReload = CurrentWeaponData.Bullets < CurrentWeaponData.BulletsPerClip && CurrentWeaponData.Clips > 0;
         if (canReload)
         {
             isReloading = true;
             animator.SetTrigger("ReloadIn");
             yield return new WaitForSeconds(animator.GetNextAnimatorClipInfo(0).Length);
-            var toAdd = bulletsPerClip - bullets;
-            toAdd = Mathf.Min(toAdd, clips);
+            var toAdd = CurrentWeaponData.BulletsPerClip - CurrentWeaponData.Bullets;
+            toAdd = Mathf.Min(toAdd, CurrentWeaponData.Clips);
             while (toAdd > 0)
             {
                 animator.SetTrigger("PutBullet");
-                yield return new WaitForSeconds(_reloadingTime);
-                bullets++;
-                clips--;
+                yield return new WaitForSeconds(CurrentWeaponData.ReloadingTime);
+                CurrentWeaponData.Bullets++;
+                CurrentWeaponData.Clips--;
                 toAdd--;
             }
             animator.SetTrigger("ReloadOut");

@@ -59,13 +59,14 @@
      <Compile Include="Assets\Scripts\Utility\LookAt.cs" />
      <Compile Include="Assets\ThirdParty\HandyHands\scripts\showcasecam.cs" />
      <Compile Include="Assets\Scripts\HealthUIManager.cs" />
+     <Compile Include="Assets\Scripts\Configs\WeaponDataConfig.cs" />
      <Compile Include="Assets\Scripts\Different Study Scripts\Passport\HumanPassport\Human\WhiteHuman.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ButtonView.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\EnemiesSpawnController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Enemies\EnemiesSpawnController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Player Controller Scripts\Weapon Controller Scripts\WeaponsManager.cs" />
      <Compile Include="Assets\Scripts\Different Study Scripts\Passport\HumanPassport\Utility\Date.cs" />
      <Compile Include="Assets\Scripts\Pause Menu\PauseMenuActivation.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Enemies\EnemyController.cs" />
      <Compile Include="Assets\Scripts\UI\Presenters\WeaponInfoPresenter.cs" />
      <Compile Include="Assets\Scripts\Different Study Scripts\Passport\HumanPassport\Utility\Sex.cs" />
      <Compile Include="Assets\Scripts\Input\InputManager.cs" />
@@ -98,6 +99,8 @@
      <Compile Include="Assets\Scripts\Gameplay\Player Controller Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\UI\Views\WeaponInfoView.cs" />
      <Compile Include="Assets\Scripts\Different Study Scripts\Passport\HumanPassport\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Scripts\Configs\WeaponImpactConfig.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Player Controller Scripts\Weapon Controller Scripts\ConfigHolder.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\ThirdParty\HandyHands\readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -683,8 +686,26 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Editor">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -692,17 +713,26 @@
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -716,38 +746,11 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
  <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <Reference Include="Unity.RenderPipelines.Core.Editor">
+ <HintPath>C:/Users/fink7/HomeWorkUI/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

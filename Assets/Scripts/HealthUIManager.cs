@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace PlayerController1
 {
@@ -15,8 +16,9 @@ namespace PlayerController1
         [SerializeField] private KeyCode _keyCode;
 
         private HealthController _healthController;
-        
 
+        [Inject] private SignalBus _signalBus;
+        
         private void Awake()
         {
             // HealthTest healthTest = gameObject.AddComponent<HealthTest>();
@@ -26,6 +28,17 @@ namespace PlayerController1
             _healthController.OnHealthChanged += UpdatePlayerOnHealth;
             _damageButton.onClick.AddListener(() => _healthController.ApplyDamage(10f));
             _someObj = GetComponent<HealthUIManager>();
+        }
+
+        private void Start()
+        {
+            _signalBus.Subscribe<KeyPressedSignal>(KeyPressedSignal);
+            //_signalBus.Unsubscribe<KeyPressedSignal>(KeyPressedSignal);
+        }
+
+        private void KeyPressedSignal(KeyPressedSignal data)
+        {
+            
         }
 
         private HealthUIManager _someObj;

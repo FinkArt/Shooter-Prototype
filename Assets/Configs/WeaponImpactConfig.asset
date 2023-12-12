@@ -58,4 +58,7 @@ MonoBehaviour:
   - GroundTag: Wood
     VFX: {fileID: 19800002, guid: 28bbf9615a4fa9a4f906305297d89b0a, type: 3}
     IsDefault: 0
+  - GroundTag: Enemy
+    VFX: {fileID: 19800000, guid: ba52805fd6eec8247b4d8496058700d5, type: 3}
+    IsDefault: 0
   _impactLifetime: 2

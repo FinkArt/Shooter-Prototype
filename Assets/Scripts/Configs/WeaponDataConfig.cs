@@ -36,8 +36,24 @@ namespace Configs.Weapons
         public float HideTime;
         public float FireDelay;
         public float FireDistance;
+        [Space]
+        public AudioClip FireAudio;
+        public AudioClip ReloadAudio;
+        [Space] 
         public LayerMask FireMask;
-        public ParticleSystem MuzzleFlash;
+        [Space]
+        public float IdleSpread = 60f;
+        public float WalkSpread = 80f;
+        public float RunSpread = 120f;
+        public float MinSpread = 60f;
+        public float MaxSpread = 200f;
+        public float SpreadIncreaseStep = 2f;
+        public float SpreadDecreaseStep = 1f;
+        public float FadeSpreadSpeed = 2f;
+        public float StartDecreaseTime = 0.8f;
+        public float MinDamage = 5f;
+        public float MaxDamage = 20f;
+
     }
     
 }

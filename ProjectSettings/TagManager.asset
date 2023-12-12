@@ -20,6 +20,7 @@ TagManager:
   - Stone
   - Water
   - Wood
+  - Waypoint
   layers:
   - Default
   - TransparentFX
@@ -27,9 +28,9 @@ TagManager:
   - Weapon
   - Water
   - UI
-  - 
-  - 
-  - 
+  - UIVFX
+  - Enemy
+  - Bullet
   - 
   - 
   - 

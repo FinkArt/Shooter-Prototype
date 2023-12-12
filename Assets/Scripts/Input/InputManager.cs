@@ -1,9 +1,10 @@
 ﻿using System;
 using PlayerController1.Utility;
 using UnityEngine;
+using Zenject;
 
 
-public class InputManager : Singleton<InputManager>
+public class InputManager : ITickable
 {
     public event Action<Vector2> OnMoveInput;
     public event Action<Vector2> OnLookInput;
@@ -14,8 +15,15 @@ public class InputManager : Singleton<InputManager>
     public event Action OnPrevWeaponInput; 
     
     private bool _run;
+
+    private SignalBus _signalBus;
     
-    public void Update()
+    public InputManager(SignalBus signalBus)
+    {
+        _signalBus = signalBus;
+    }
+
+    public void Tick()
     {
         var horizontalInput = Input.GetAxis("Horizontal"); // 1 0 -1 A = -1, D = 1, <- = -1, -> = 1
         var verticalInput = Input.GetAxis("Vertical");
@@ -40,8 +48,11 @@ public class InputManager : Singleton<InputManager>
         var moveInput = new Vector2(horizontalInput, verticalInput);
         OnMoveInput?.Invoke(moveInput);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            var pressedSignal = new KeyPressedSignal();
+            pressedSignal.PressedButton = KeyCode.Space;
+            _signalBus.Fire(pressedSignal);
             OnJumpInput?.Invoke();
         }
         
@@ -57,11 +68,5 @@ public class InputManager : Singleton<InputManager>
             OnPrevWeaponInput?.Invoke();
         var mouseScrollInput = Input.GetAxis("Mouse ScrollWheel");
         OnWeaponChangeScrollMouseInput?.Invoke(mouseScrollInput);
-        
-        
-        
-        
-        
-
     }
 }

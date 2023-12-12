@@ -23,9 +23,9 @@ namespace UI.Presenters
             _weaponInfoView.SetBulletInfo(bullets, clips);
         }
 
-        private void OnWeaponsManagerWeaponChanged(string weaponName, Sprite weaponImage)
+        private void OnWeaponsManagerWeaponChanged(WeaponBase weapon)
         {
-            _weaponInfoView.SetWeaponName(weaponName, weaponImage);
+            _weaponInfoView.SetWeaponName(weapon.WeaponName.ToString(), weapon.WeaponImage);
         }
     }
 

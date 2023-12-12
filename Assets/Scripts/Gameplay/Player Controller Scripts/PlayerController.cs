@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Zenject;
 
 // public interface IInputManager
 // {
@@ -77,19 +78,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed = 2f;
     [SerializeField] private float _camSenseX = 4f;
     [SerializeField] private float _camSenseY = 4f;
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private Rigidbody _rb;
     [SerializeField] private float _maxAngle = 60f;
     [SerializeField] private float _minAngle = -60f;
     [SerializeField] private float _jumpSpeed = 5f;
     private float _currentAngle;
-    [SerializeField] private float _gravityValue = -9.81f;
-    
+    [Inject] private InputManager _inputManager;
     
     private void Start()
     {
-        InputManager.Instance.OnMoveInput += OnInputMove;
-        InputManager.Instance.OnLookInput += OnInputLook;
-        InputManager.Instance.OnJumpInput += OnInputJump;
+        _inputManager.OnMoveInput += OnInputMove;
+        _inputManager.OnLookInput += OnInputLook;
+        _inputManager.OnJumpInput += OnInputJump;
        
         _currentAngle = _cam.transform.eulerAngles.x;
         OnPlayerSpawned?.Invoke(this);
@@ -109,26 +109,32 @@ public class PlayerController : MonoBehaviour
     {
         var horizontalMove = new Vector3(moveInput.x, 0f, moveInput.y);
         var moveDir = horizontalMove * _moveSpeed;
-        _characterController.Move(transform.TransformDirection(moveDir));
+        _rb.velocity = transform.TransformDirection(moveDir);
     }
 
     private void OnInputJump()
     {
-        var moveDir = new Vector3(0f, 0f, 0f);
-        Debug.Log(_characterController.isGrounded);
-        //if (_characterController.isGrounded)
-        {
-            moveDir.y += _jumpSpeed;
-            
-        }
-        // moveDir.y += _gravityValue * Time.deltaTime;
-        
-        // if (!_characterController.isGrounded || moveDir.y < 0f)
-        // {
-        //     moveDir.y = 0f;
-        // }
-        _characterController.Move(transform.TransformDirection(moveDir));
+       _rb.velocity += new Vector3(0f, _jumpSpeed, 0f);
     }  
 
    
 }
+
+/*
+ изучить:
+ - переписать в ноушен
+ - GRASP
+ - GoF (Gang of Four) Patterns: https://refactoring.guru - VPN Only
+ 
+repeat:
+  - SOLID
+  - MV*
+ 
+ по игре-
+ - сделать команды, спаун врагов и спаун друзей
+  - боты ищут цели по интерфейсу ай таргет
+  - список целей и ищет ближайшую 
+  - проверка на видимость за стенкой цели 
+  - ботам гнайти модели друзья и враги, с анимациеями и сделать (прикрутить) их
+  - сделать ботам патроны и перезарядку
+ */

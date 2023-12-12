@@ -12,6 +12,8 @@ public class HealthComponent : MonoBehaviour
     [SerializeField] private float _healthRegenerationAmount = 5f;
     [SerializeField] private float _regenerationDelay = 0.5f;
     [SerializeField] private float _onDamageRegenerationDelay = 3f;
+    [SerializeField] private float _corpseLifetime = 10f;
+    [SerializeField] private Transform _corpse;
     
     private float _nextRegenerationTime;
 
@@ -51,7 +53,9 @@ public class HealthComponent : MonoBehaviour
         {
             _health = 0f;
             _isDead = true;
+            var corpse = Instantiate(_corpse, transform.position, transform.rotation);
             Destroy(gameObject);
+            Destroy(corpse.gameObject, _corpseLifetime);
             OnDead?.Invoke();
         }
     }
